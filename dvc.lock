@@ -4,8 +4,8 @@ stages:
     cmd: python build_submissions.py
     deps:
     - path: build_submissions.py
-      md5: 943bb8211b89af765f823b1ee84ad534
-      size: 648
+      md5: 316d662140538345c68ece17adc9bff8
+      size: 650
     params:
       params.yaml:
         build_submissions.seed: 8
