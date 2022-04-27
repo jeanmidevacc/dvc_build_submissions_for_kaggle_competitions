@@ -1,0 +1,9 @@
+stages:
+  build_submissions:
+    cmd: python build_submissions.py
+    deps:
+    - build_submissions.py
+    params:
+    - build_submissions.seed
+    outs:
+    - data

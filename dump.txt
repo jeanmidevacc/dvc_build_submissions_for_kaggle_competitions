@@ -1,0 +1,10 @@
+dvc stage add --force -n build_submissions \
+                -p build_submissions.seed\
+                -d build_submissions.py \
+                python build_submissions.py
+                
+                
+dvc stage add --force -n compute_rmse_random \
+                -d compute_rmse.py \
+                -M ./data/metrics_random.json \
+                python compute_rmse.py ./data/random_submission.csv ../dvc_build_kaggle_competition/data/kaggle/ ./data/metrics_random.json

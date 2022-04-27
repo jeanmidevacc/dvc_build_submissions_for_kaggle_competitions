@@ -1,0 +1,15 @@
+stages:
+  build_submissions:
+    cmd: python build_submissions.py
+    deps:
+    - build_submissions.py
+    params:
+    - build_submissions.seed
+  compute_rmse_random:
+    cmd: python compute_rmse.py ./data/random_submission.csv ../dvc_build_kaggle_competition/data/kaggle/
+      ./data/metrics_random.json
+    deps:
+    - compute_rmse.py
+    metrics:
+    - ./data/metrics_random.json:
+        cache: false
