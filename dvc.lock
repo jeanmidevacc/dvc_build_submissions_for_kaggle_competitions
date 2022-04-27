@@ -8,7 +8,7 @@ stages:
       size: 648
     params:
       params.yaml:
-        build_submissions.seed: 13
+        build_submissions.seed: 14
   compute_rmse_random:
     cmd: python compute_rmse.py ./data/random_submission.csv ../dvc_build_kaggle_competition/data/kaggle/
       ./data/metrics_random.json
