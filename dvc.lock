@@ -4,19 +4,26 @@ stages:
     cmd: python build_submissions.py
     deps:
     - path: build_submissions.py
-      md5: 316d662140538345c68ece17adc9bff8
-      size: 650
+      md5: 943bb8211b89af765f823b1ee84ad534
+      size: 648
     params:
       params.yaml:
         build_submissions.seed: 8
+    outs:
+    - path: ./data/random_submission.csv
+      md5: c075a956a94eaa60fca28d9740959cc2
+      size: 25567
   compute_rmse_random:
     cmd: python compute_rmse.py ./data/random_submission.csv ../dvc_build_kaggle_competition/data/kaggle/
       ./data/metrics_random.json
     deps:
+    - path: ./data/random_submission.csv
+      md5: c075a956a94eaa60fca28d9740959cc2
+      size: 25567
     - path: compute_rmse.py
       md5: 7e40b0f2d4da2504e3b76933b39b0627
       size: 990
     outs:
     - path: ./data/metrics_random.json
-      md5: d5cbc5d6b31c69d7b7b42b9641f91d12
+      md5: 087ce552b9053b8e63bf9ca4991855bf
       size: 93
