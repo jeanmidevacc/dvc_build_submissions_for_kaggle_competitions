@@ -8,22 +8,22 @@ stages:
       size: 648
     params:
       params.yaml:
-        build_submissions.seed: 8
+        build_submissions.seed: 7
     outs:
     - path: ./data/random_submission.csv
-      md5: c075a956a94eaa60fca28d9740959cc2
-      size: 25567
+      md5: fe1123b3de9a93640741d28d8f388731
+      size: 25542
   compute_rmse_random:
     cmd: python compute_rmse.py ./data/random_submission.csv ../dvc_build_kaggle_competition/data/kaggle/
       ./data/metrics_random.json
     deps:
     - path: ./data/random_submission.csv
-      md5: c075a956a94eaa60fca28d9740959cc2
-      size: 25567
+      md5: fe1123b3de9a93640741d28d8f388731
+      size: 25542
     - path: compute_rmse.py
-      md5: 7e40b0f2d4da2504e3b76933b39b0627
-      size: 990
+      md5: 62018d17c9216d06e1a54088106db515
+      size: 993
     outs:
     - path: ./data/metrics_random.json
-      md5: 087ce552b9053b8e63bf9ca4991855bf
+      md5: 43cafacafa7f4606dbf64bf92033f91f
       size: 93

@@ -21,7 +21,7 @@ for usage in ["Private", "Public"]:
     rmse = mean_squared_error(dfp_to_evaluate_select["Interest"].tolist(), dfp_to_evaluate_select["Prediction"].tolist(), squared=False)
     print(usage, rmse)
     metrics[f"rmse_on_{usage.lower()}_solution"] = rmse
-    live.log(f"rmse_on_{usage.lower()}_solution", rmse)
+    live.log(f"rmse_on_{usage.lower()}_solution_dl", rmse)
 with open(file_metrics, "w") as fd:
     json.dump(metrics, fd)
     
