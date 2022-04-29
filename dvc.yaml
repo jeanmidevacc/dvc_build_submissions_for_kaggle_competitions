@@ -15,4 +15,4 @@ stages:
     - compute_rmse.py
     metrics:
     - ./data/metrics_random.json:
-        cache: true
+        cache: false
